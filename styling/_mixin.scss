@@ -1,0 +1,8 @@
+
+
+@mixin main_contact($size, $style, $bold, $color){
+    font-size:$size;
+    font-family:$style;
+    font-weight:$bold;
+    color:$color;
+}

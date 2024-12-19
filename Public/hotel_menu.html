@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Hotel</title>
+
+  <!-- bootstrap5 cdn link css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- css link -->
+  <link rel="stylesheet" type="text/css" href="../styling/main.css">
+
+  <!-- boxicon link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- faviicon-link -->
+  <link rel="icon" type="image/x-icon" href="./image/faviicon.png">
+  
+  <!-- aos gallery link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body style="background-color:#232b3e;">
+
+  
+  <div class="sidebar">
+    <ul class="nav-links">
+      <li>
+        <div class="profile-main">
+           <div class="profile-img">
+             <img src="./image/profile-img.jpg" alt="profile-img" />
+           </div>
+           <div class="profile-content">
+              <h3>Dexter Smith</h3>
+              <h5>Manager</h5>
+           </div>
+        </div>
+      </li>
+
+      <li>
+        <a href="./index.html">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <li>
+          <a href="./about.html">
+            <i class='bx bx-info-circle'></i>
+            <span class="link_name">About</span>
+          </a>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="./room.html">        
+              <i class='bx bx-info-circle' id="room-icon"></i>
+              <span class="link_name">Rooms</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="./singleroom.html">Single Room</a></li>
+            <li><a href="./doubleroom.html">Double Room</a></li>
+            <li><a href="./familyroom.html">Family Room</a></li>
+            <li><a href="./luxuryroom.html">luxury Room</a></li>
+          </ul>
+        </li>
+      <li>
+        <a href="./contact.html">
+          <i class='bx bxs-contact'></i>
+          <span class="link_name">ContactUs</span>
+        </a>
+      </li>
+      <li>
+        <div class="iocn-link active">
+          <a href="#">        
+            <i class='bx bx-info-circle' id="room-icon"></i>
+            <span class="link_name">OtherInfo</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a href="./booking.html">Room Booking</a></li>
+          <li><a href="./service.html" class="active">Hotel Services</a></li>
+          <li><a href="./private_events.html">Private Events</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+      </li>
+      <li>
+        <a href="./index.html">
+          <i class='bx bx-log-out'></i>
+          <span class="link_name">Logout</span>
+        </a>
+      </li>
+</ul>
+  </div>
+   
+
+
+
+
+  <div class="main-section">
+
+  <div id="header"> 
+    <div class="header">
+      <!-- Navbar structure -->
+      <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <a class="navbar-brand" href="#">
+          <img src="./image/logos.png" alt="navbar-logo"/>
+        </a>
+        <div class="logo-details">
+          <div class="logo_name"></div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="input-serach">
+                <button class="input-btn" type="submit"><i class='bx bx-search'></i></button>
+              </form>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-user-circle'></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="" class="dropdown-item">
+                    <img src="./image/profile-img.jpg" alt="user-img" />
+                  </a>
+                </li>
+                <li><a class="dropdown-item" href="#">Dexter Smith</a></li>
+                <li><a class="dropdown-item" href="#">Manager</a></li>
+                <li><a href="" class="dropdown-item">Setting</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+</div>
+
+  <main class="page-content">
+    <div class="container-fulid">
+      <div class="row" id="page-content-row">
+
+       <!-- menu-heading start -->
+
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+          <div class="menu-heading">
+             <h2>Hotel Restaurant</h2>
+          </div>
+        </div>
+
+       <!-- menu-heading end -->
+
+
+       <!-- menu-details start -->
+ 
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+          <div class="hotel-menu-main">
+             <h2>About Restaurant</h2>
+             <p>Led by Chef de Micheal Martin, The Restaurant is celebrated for its excellent cuisine and unique ambience. The gorgeous dining room features three open studio kitchens, allowing you to enjoy the sights and sounds of the culinary artistry on display.</p>
+             <p>The menu showcases both Asian and European influences, with a tempting selection of classic favorites and creative dishes for you to sample. Cheese connoisseurs will be drawn to the The Wine and Cheese Cellar, housed in five-meter-high glass walls, where our knowledgeable staff can introduce you to some of New York's greatest culinary treasures.</p>
+          </div>
+          <div class="row" id="menu-row">
+            <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+              <div class="time-menu">
+                <ul>
+                    <li>
+                        <h4>Hours</h4>
+                    </li>
+                    <li><i class='bx bx-time'></i> Breakfast: 7.00 am – 11.00 am (daily)</li>
+                    <li><i class='bx bx-time'></i> Lunch: 12.00 noon – 2.00 pm (daily)</li>
+                    <li><i class='bx bx-time'></i> Dinner: open from 6.30 pm, last order at 10.00 pm (daily)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+              <div class="other-d">
+                <h4>Dress Code</h4>
+                <p>Smart casual (no shorts, hats, or sandals permitted).</p>
+                <h4>Terrace</h4>
+                <p>Open for drinks only.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+          <div class="menu-detail-heading">
+            <h4>Restaurant Menu</h4>
+          </div>
+        </div>
+
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+            <div class="card">
+                <div class="card-body" id="room-card-body">
+                  <div class="table-responsive">
+                    <table class="table-hover text-center custom-table" id="main_table">
+                      <thead id="thead-table">
+                          <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Diss Name</th>
+                              <th scope="col">Diss Info</th>
+                              <th scope="col">Price</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td scope="row">Starters</td>
+                              <td>Mozzarella Dippers</td>
+                              <td>Fried mozzarella sticks, marinara sauce</td>
+                              <td>$27</td>
+                          </tr>
+                          <tr>
+                             <td scope="row">Starters</td>
+                             <td>Onion Rings</td>
+                             <td>Fried onion rings, smoked aioli</td>
+                             <td>32$</td>
+                          </tr>
+                          <tr>
+                             <td scope="row">Starters</td>
+                             <td>Fried Jalapeno</td>
+                             <td>Fried jalapeno pickles, cheddar sauce</td>
+                             <td>52$</td>
+                          </tr>
+                           <tr>
+                               <td scope="row">Starters</td>
+                               <td>Potato Skins</td>
+                               <td>Crispy potato skins; bacon & cheddar or vegetables</td>
+                               <td>45$</td>
+                           </tr>
+   
+                           <tr>
+                               <td scope="row">Mains</td>
+                               <td>Rusty’s Burger</td>
+                               <td>Smoked pulled beef ribs, bbq sauce, cheddar, crispy onion</td>
+                               <td>27$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Mains</td>
+                               <td>Southern Fried Chicken</td>
+                               <td>Cajun coated chicken breast, fries and honey mustard</td>
+                               <td>52$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Mains</td>
+                               <td>Crab Cake</td>
+                               <td>Breaded crab cakes, tartar sauce, apple and fennel salad</td>
+                               <td>37$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Mains</td>
+                               <td>Baby Back Ribs</td>
+                               <td>Bbq glazed baby pork ribs, coleslaw, fries</td>
+                               <td>32$</td>
+                           </tr>
+   
+                           <tr>
+                               <td scope="row">Salads</td>
+                               <td>Ceaser Salad</td>
+                               <td>Romaine lettuce, croutons, parmigiano, Ceaser dressing.</td>
+                               <td>47$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Salads</td>
+                               <td>Quinoa & Avocado Salad</td>
+                               <td>Quinoa, avocado, mixed greens. Nuts, dried and fresh fruits</td>
+                               <td>52$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Salads</td>
+                               <td>Grilled Salmon Salad</td>
+                               <td>Grilled salmon, mixed greens, capers, orange slices</td>
+                               <td>37$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Salads</td>
+                               <td>Waldorf Salad</td>
+                               <td>Lettuce, celery, apple, grape, walnut, waldorf sauce</td>
+                               <td>52$</td>
+                           </tr>
+   
+                           <tr>
+                               <td scope="row">Wine</td>
+                               <td>Château d'Yquem 2011</td>
+                               <td>Dessert Wine, Bordeaux, Graves, Sauternes</td>
+                               <td>400$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Wine</td>
+                               <td>Chateau D'yquem 1990</td>
+                               <td>Dessert Wine, Bordeaux, Graves, Sauternes</td>
+                               <td>900$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Wine</td>
+                               <td>Alvear Cream NV</td>
+                               <td>Dessert, Fortified Wine, Andalucia</td>
+                               <td>30$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Wine</td>
+                               <td>Sine Qua Non 2012</td>
+                               <td>Syrah, Shiraz & Blends, California</td>
+                               <td>520$</td>
+                           </tr>
+   
+                           <tr>
+                               <td scope="row">Breakfast</td>
+                               <td>Egg Benedict</td>
+                               <td>English muffin, beef, hollandaise sauce, poached egg.</td>
+                               <td>60$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Breakfast</td>
+                               <td>Salmon Bagel</td>
+                               <td>Smoked salmon, cream cheese, dill, rocket, red onion.</td>
+                               <td>30$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Breakfast</td>
+                               <td>Texas Benedict</td>
+                               <td>English muffin, short ribs, bbq sauce, poached egg.</td>
+                               <td>30$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Breakfast</td>
+                               <td>Rusty’s Omlette</td>
+                               <td>Mozzarella, cheddar, caramelized onion, black beans.</td>
+                               <td>22$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Breakfast</td>
+                               <td>Rusty’s Pancake</td>
+                               <td>Strawberry, white chocolate, dark chocolate, crispearls</td>
+                               <td>40$</td>
+                           </tr>
+   
+                           <tr>
+                               <td scope="row">Dessert</td>
+                               <td>Bourbon Pecan Pie</td>
+                               <td>Bourbon pecan stuffed pie, vanilla ice-cream</td>
+                               <td>67$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Dessert</td>
+                               <td>S’mores</td>
+                               <td>Chocolate chip cookies, marshmallow, chocolate</td>
+                               <td>40$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Dessert</td>
+                               <td>New York Cheesecake</td>
+                               <td>Cheesecake, strawberry & lime salad</td>
+                               <td>50$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Dessert</td>
+                               <td>Apple & Pear Crumble</td>
+                               <td>Caramelized pear and apple, oat crumble, vanilla ice-cream</td>
+                               <td>42$</td>
+                           </tr>
+                           <tr>
+                               <td scope="row">Dessert</td>
+                               <td>Rusty’s ice-cream</td>
+                               <td>Vanilla, bourbon, cookie, chocolate ice-cream</td>
+                               <td>32$</td>
+                           </tr>
+   
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- menu-details end -->
+
+
+            <!-- copyright section start -->
+
+              <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+                <div class="copyright">
+                  <div class="row">
+                    <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                      <div class="copyright-main">
+                        <h5>Copyright © 2024 Luxurious. All Rights Reserved.</h5>
+                      </div>
+                    </div>
+                      <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                        <div class="copyright-main2">
+                          <h5>Developed by: <a href="#">ThemePure</a></h5>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- copyright section end -->
+           
+
+      </div>
+    </div>
+  </main>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+
+   // sidebar toggle button
+
+  let sidebar = document.querySelector(".sidebar");
+  let logoHeader = document.querySelector("#header");
+  let closeBtn = document.querySelector("#btn");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    logoHeader.classList.toggle("open");
+    menuBtnChange();
+  });
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+
+  // navbar toggle in sidebar js
+      let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e)=>{
+    let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+    arrowParent.classList.toggle("showMenu");
+      });
+    }
+
+// sidebar dropdown js
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const dropdownToggle = document.getElementById('otherInfoDropdown');
+//   const dropdownMenu = dropdownToggle.nextElementSibling;
+//   const dropdownIcon = document.getElementById('dropdownIcon');
+
+//   dropdownToggle.addEventListener('click', function() {
+//     dropdownMenu.classList.toggle('show');
+//     dropdownIcon.classList.toggle('rotate');
+//   });
+
+//   document.addEventListener('click', function(e) {
+//     if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+//       dropdownMenu.classList.remove('show');
+//       dropdownIcon.classList.remove('rotate');
+//     }
+//   });
+// });
+
+</script>
+
+</body>
+</html>
+
+
+<!-- <button type="button" onclick="redirectToPage()">Click Now</button>
+
+<script>
+function redirectToPage() {
+    window.location.href = "https://example.com";
+}
+</script> -->

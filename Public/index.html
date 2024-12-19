@@ -1,0 +1,593 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Hotel</title>
+
+  <!-- bootstrap5 cdn link css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- css link -->
+  <link rel="stylesheet" type="text/css" href="../styling/main.css">
+
+  <!-- boxicon link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- faviicon-link -->
+  <link rel="icon" type="image/x-icon" href="./image/faviicon.png">
+  
+  <!-- aos gallery link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body style="background-color:#232b3e;">
+
+  
+  <div class="sidebar">
+    <ul class="nav-links">
+      <li>
+        <div class="profile-main">
+           <div class="profile-img">
+             <img src="./image/profile-img.jpg" alt="profile-img" />
+           </div>
+           <div class="profile-content">
+              <h3>Dexter Smith</h3>
+              <h5>Manager</h5>
+           </div>
+        </div>
+      </li>
+
+      <li>
+        <a href="./index.html" class="active">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <li>
+          <a href="./about.html">
+            <i class='bx bx-info-circle'></i>
+            <span class="link_name">About</span>
+          </a>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="./room.html">        
+              <i class='bx bx-info-circle' id="room-icon"></i>
+              <span class="link_name">Rooms</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="./singleroom.html">Single Room</a></li>
+            <li><a href="./doubleroom.html">Double Room</a></li>
+            <li><a href="./familyroom.html">Family Room</a></li>
+            <li><a href="./luxuryroom.html">luxury Room</a></li>
+          </ul>
+        </li>
+      <li>
+        <a href="./contact.html">
+          <i class='bx bxs-contact'></i>
+          <span class="link_name">ContactUs</span>
+        </a>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">        
+            <i class='bx bx-info-circle' id="room-icon"></i>
+            <span class="link_name">OtherInfo</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a href="./booking.html">Room Booking</a></li>
+          <li><a href="./service.html">Hotel Services</a></li>
+          <li><a href="./private_events.html">Private Events</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+      </li>
+      <li>
+        <a href="./index.html">
+          <i class='bx bx-log-out'></i>
+          <span class="link_name">Logout</span>
+        </a>
+      </li>
+</ul>
+  </div>
+   
+
+  <div class="main-section">
+
+  <div id="header"> 
+    <div class="header">
+    
+     <!-- Navbar structure -->
+      <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <a class="navbar-brand" href="#">
+          <img src="./image/logos.png" alt="navbar-logo"/>
+        </a>
+        <div class="logo-details">
+          <div class="logo_name"></div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="input-serach">
+                <button class="input-btn" type="submit"><i class='bx bx-search'></i></button>
+              </form>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-user-circle'></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="" class="dropdown-item">
+                    <img src="./image/profile-img.jpg" alt="user-img" />
+                  </a>
+                </li>
+                <li><a class="dropdown-item" href="#">Dexter Smith</a></li>
+                <li><a class="dropdown-item" href="#">Manager</a></li>
+                <li><a href="" class="dropdown-item">Setting</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+  </div>
+</div>
+
+  <main class="page-content">
+    <div class="container-fulid">
+      <div class="row" id="page-content-row">
+
+       <!-- dashboard-heading start -->
+
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+          <div class="dashboard-heading">
+            <video autoplay muted loop id="background-video">
+              <source src="../Public/image/dash-bg.mp4" type="video/mp4">
+            </video>
+            <p>* A seaside oasis for tranquility and rejuvenation *</p>
+            <h2>Welcome to Our Luxurious Hotel & Resort</h2>
+          </div>
+        </div>
+
+       <!-- dashboard-heading end -->
+
+        <!-- card start -->
+
+          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+            <div class="main-card card1">
+              <div class="card-icon">
+                 <span><i class='bx bx-paste' ></i></span>
+              </div>
+              <div class="card-title">
+                <h6>Total Booking</h6>
+                <h4>1,245</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+            <div class="main-card card2">
+              <div class="card-icon">
+                 <span><i class='bx bx-bed'></i></span>
+              </div>
+              <div class="card-title">
+                <h6>Rooms Available</h6>
+                <h4>387</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 col-sm-12 col-md-6 mt-5">
+            <div class="main-card card3">
+              <div class="card-icon">
+                 <span><i class='bx bx-dollar' ></i></span>
+              </div>
+              <div class="card-title">
+                <h6>Total Revenue</h6>
+                <h4>$22,567</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 col-sm-12 col-md-6 mt-5">
+            <div class="main-card card4">
+              <div class="card-icon">
+                 <span><i class='bx bxs-user'></i></span>
+              </div>
+              <div class="card-title">
+                <h6>New Customers</h6>
+                <h4>1,233</h4>
+              </div>
+            </div>
+          </div>
+
+        <!-- card end -->
+          
+            <!-- customer review start -->
+
+          <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+            <div class="row">
+              <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                <div class="customer_review_main">
+                  <div class="customer_heading">
+                    <h4>Latest Customer Review</h4>
+                  </div>
+                  <div class="card-review-main">
+                    <div class="review_main">
+                      <div class="customer_img">
+                        <img src="./image/user1.jpg" alt="user1"/>
+                      </div>
+                      <div class="customer_title">
+                        <h5>Alis Smith</h5>
+                        <a href="#"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bx-star' ></i></a>
+                        <p>I have been there many times.Rooms ,Food and Service are excellent.we did lots of Excursions and all the places are from the Hotel reachable. we visited Long Waterfall and was very helpful and excellent</p>
+                      </div>
+                     </div>
+                     <div class="review_main">
+                      <div class="customer_img">
+                        <img src="./image/user2.jpg" alt="user2"/>
+                      </div>
+                      <div class="customer_title">
+                        <h5>John Dio</h5>
+                        <a href="#"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star-half' ></i><i class='bx bx-star' ></i></a>
+                        <p>I have been there many times.Rooms ,Food and Service are excellent.we did lots of Excursions and all the places are from the Hotel reachable. we visited Long Waterfall and was very helpful and excellent</p>
+                      </div>
+                     </div>
+                     <div class="review_main">
+                      <div class="customer_img">
+                        <img src="./image/user3.jpg" alt="user3"/>
+                      </div>
+                      <div class="customer_title">
+                        <h5>Ali Muzair</h5>
+                        <a href="#"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star-half' ></i><i class='bx bx-star' ></i><i class='bx bx-star' ></i></a>
+                        <p>I have been there many times.Rooms ,Food and Service are excellent.we did lots of Excursions and all the places are from the Hotel reachable. we visited Long Waterfall and was very helpful and excellent</p>
+                      </div>
+                     </div>
+                     <div class="review_main">
+                      <div class="customer_img">
+                        <img src="./image/user4.jpg" alt="user4"/>
+                      </div>
+                      <div class="customer_title">
+                        <h5>Keanu Repes</h5>
+                        <a href="#"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star-half' ></i><i class='bx bx-star' ></i></a>
+                        <p>I have been there many times.Rooms ,Food and Service are excellent.we did lots of Excursions and all the places are from the Hotel reachable. we visited Long Waterfall and was very helpful and excellent</p>
+                      </div>
+                     </div>
+                     <div class="review_main">
+                      <div class="customer_img">
+                        <img src="./image/user5.jpg" alt="user4"/>
+                      </div>
+                      <div class="customer_title">
+                        <h5>Chintya Clara</h5>
+                        <a href="#"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bx-star' ></i><i class='bx bx-star' ></i></a>
+                        <p>I have been there many times.Rooms ,Food and Service are excellent.we did lots of Excursions and all the places are from the Hotel reachable. we visited Long Waterfall and was very helpful and excellent</p>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div id="chartContainer"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- customer review end -->
+
+         
+         <!-- tabel start -->
+           
+         <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+           <div class="card">
+             <div class="card_table_heading">
+               <h4>Booking Details</h4>
+             </div>
+             <div class="card-body">
+               <div class="table-responsive">
+                <table class="table-hover text-center custom-table" id="main_table">
+                  <thead id="thead-table">
+                      <tr>
+                          <th scope="col">Room No.</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Phn No.</th>
+                          <th scope="col">Room Type</th>
+                          <th scope="col">Proof</th>
+                          <th scope="col">Payment</th>
+                          <th scope="col">Check In</th>
+                          <th scope="col">Check Out</th>
+                          <th scope="col">Status</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td scope="row">109</td>
+                          <td>John Deo</td>
+                          <td>(123)123456</td>
+                          <td>Double</td>
+                          <td>Pan Card</td>
+                          <td class="text-success">Cash</td>
+                          <td>28/02/2024</td>
+                          <td>05/03/2024</td>
+                          <td>
+                            <button type="button" class="btn btn-outline-primary">Inactive</button>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td scope="row">118</td>
+                        <td>Jens Brincker</td>
+                        <td>(123)123456</td>
+                        <td>Single</td>
+                        <td>Passport</td>
+                        <td class="text-danger">Pending</td>
+                        <td>25/02/2024</td>
+                        <td>25/02/2024</td>
+                        <td>
+                          <button type="button" class="btn btn-outline-primary">Inactive</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td scope="row">203</td>
+                        <td>Mark Hay</td>
+                        <td>(123)123456</td>
+                        <td>Appartment</td>
+                        <td>Adhar Card</td>
+                        <td class="text-success">Gpay</td>
+                        <td>19/12/2021</td>
+                        <td>25/12/2021</td>
+                        <td>
+                          <button type="button" class="btn btn-outline-primary">Inactive</button>
+                        </td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <td scope="row">208</td>
+                      <td>Anthony Davie</td>
+                      <td>(123)123456</td>
+                      <td>Family</td>
+                      <td>Pan Card</td>
+                      <td class="text-danger">Pending</td>
+                      <td>01/12/2024</td>
+                      <td>10/01/2025</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-danger">active</button>
+                      </td>
+                    </tr>
+                    
+                  </tr>
+                  <tr>
+                    <td scope="row">209</td>
+                    <td>Sue Woodger</td>
+                    <td>(123)123456</td>
+                    <td>Appartment</td>
+                    <td>Passport</td>
+                    <td class="text-success">Gpay</td>
+                    <td>04/12/2024</td>
+                    <td>25/12/2024</td>
+                    <td>
+                      <button type="button" class="btn btn-outline-danger">active</button>
+                    </td>
+                  </tr>
+                  
+                </tr>
+                <tr>
+                  <td scope="row">210</td>
+                  <td>Alan Gilchrist</td>
+                  <td>(123)123456</td>
+                  <td>luxury</td>
+                  <td>Passport</td>
+                  <td class="text-success">check</td>
+                  <td>19/12/2021</td>
+                  <td>25/12/2021</td>
+                  <td>
+                    <button type="button" class="btn btn-outline-primary">Inactive</button>
+                  </td>
+                </tr>
+                
+              </tr>
+              <tr>
+                <td scope="row">214</td>
+                <td>David Perry</td>
+                <td>(123)123456</td>
+                <td>Single</td>
+                <td>Adhar Card</td>
+                <td class="text-danger">Pending</td>
+                <td>02/12/2024</td>
+                <td>15/12/2024</td>
+                <td>
+                  <button type="button" class="btn btn-outline-danger">active</button>
+                </td>
+              </tr>
+              
+            </tr>
+            <tr>
+              <td scope="row">215</td>
+              <td>Sneha Pandit</td>
+              <td>(123)123456</td>
+              <td>Double</td>
+              <td>Check</td>
+              <td class="text-success">Gpay</td>
+              <td>19/11/2024</td>
+              <td>02/12/2024</td>
+              <td>
+                <button type="button" class="btn btn-outline-primary">Inactive</button>
+              </td>
+            </tr>
+                  </tbody>
+                </table>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <!-- table end -->
+
+
+            <!-- copyright section start -->
+
+                <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+                      <div class="copyright">
+                        <div class="row">
+                        <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <div class="copyright-main">
+                                <h5>Copyright © 2024 Luxurious. All Rights Reserved.</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <div class="copyright-main2">
+                                <h5>Developed by: <a href="#">ThemePure</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+            <!-- copyright section end -->
+           
+
+      </div>
+    </div>
+  </main>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+<script>
+
+   // sidebar toggle button
+
+  let sidebar = document.querySelector(".sidebar");
+  let logoHeader = document.querySelector("#header");
+  let closeBtn = document.querySelector("#btn");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    logoHeader.classList.toggle("open");
+    menuBtnChange();
+  });
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+
+  // navbar toggle in sidebar js
+      let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e)=>{
+    let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+    arrowParent.classList.toggle("showMenu");
+      });
+    }
+
+// sidebar dropdown js
+
+// document.addEventListener('DOMContentLoaded', function() {
+  // const dropdownToggle = document.getElementById('otherInfoDropdown');
+  // const dropdownMenu = dropdownToggle.nextElementSibling;
+  // const dropdownIcon = document.getElementById('dropdownIcon');
+
+  // dropdownToggle.addEventListener('click', function() {
+  //   dropdownMenu.classList.toggle('show');
+  //   dropdownIcon.classList.toggle('rotate');
+  // });
+
+  // document.addEventListener('click', function(e) {
+  //   if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+  //     dropdownMenu.classList.remove('show');
+  //     dropdownIcon.classList.remove('rotate');
+  //   }
+  // });
+  
+// });
+
+</script>
+
+
+<!-- graph income -->
+<script>
+  window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer", {
+          animationEnabled: true,
+          zoomEnabled: true,
+          backgroundColor:"#1a202e",
+          title: {
+              text: "Monthly Income Over a Year",
+              fontColor:"white",
+              fontSize:24,
+              fontWeight:100,
+              marignBottom:20
+          },
+          axisX: {
+              title: "Income in $ By Months",
+              interval: 1,
+              titleFontColor:"white",
+              labelFontColor:"white"
+          },
+          axisY: {
+              includeZero: false,
+              titleFontColor:"white",
+              labelFontColor:"#96a2b4"
+          },
+          data: data
+      });
+      chart.render();
+  }
+
+  var incomeData = [
+      { month: "January", income: 5000 },
+      { month: "February", income: 5500 },
+      { month: "March", income: 5200 },
+      { month: "April", income: 5800 },
+      { month: "May", income: 6000 },
+      { month: "June", income: 6300 },
+      { month: "July", income: 6500 },
+      { month: "August", income: 6700 }
+  ];
+
+  var data = [];
+  var dataSeries = { type: "line" };
+  var dataPoints = [];
+
+  for (var i = 0; i < incomeData.length; i++) {
+      dataPoints.push({
+          x: i + 1,
+          y: incomeData[i].income,
+          label: incomeData[i].month
+      });
+  }
+
+  dataSeries.dataPoints = dataPoints;
+  data.push(dataSeries);
+</script>
+
+</body>
+</html>

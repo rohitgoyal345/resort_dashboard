@@ -1,0 +1,618 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Hotel</title>
+
+  <!-- bootstrap5 cdn link css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- css link -->
+  <link rel="stylesheet" type="text/css" href="../styling/main.css">
+
+  <!-- boxicon link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- faviicon-link -->
+  <link rel="icon" type="image/x-icon" href="./image/faviicon.png">
+  
+  <!-- aos gallery link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body style="background-color:#232b3e;">
+
+  
+  <div class="sidebar">
+    <ul class="nav-links">
+      <li>
+        <div class="profile-main">
+           <div class="profile-img">
+             <img src="./image/profile-img.jpg" alt="profile-img" />
+           </div>
+           <div class="profile-content">
+              <h3>Dexter Smith</h3>
+              <h5>Manager</h5>
+           </div>
+        </div>
+      </li>
+
+      <li>
+        <a href="./index.html">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <li>
+          <a href="./about.html">
+            <i class='bx bx-info-circle'></i>
+            <span class="link_name">About</span>
+          </a>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="./room.html">        
+              <i class='bx bx-info-circle' id="room-icon"></i>
+              <span class="link_name">Rooms</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="./singleroom.html">Single Room</a></li>
+            <li><a href="./doubleroom.html">Double Room</a></li>
+            <li><a href="./familyroom.html">Family Room</a></li>
+            <li><a href="./luxuryroom.html">luxury Room</a></li>
+          </ul>
+        </li>
+      <li>
+        <a href="./contact.html">
+          <i class='bx bxs-contact'></i>
+          <span class="link_name">ContactUs</span>
+        </a>
+      </li>
+      <li>
+        <div class="iocn-link active">
+          <a href="#">        
+            <i class='bx bx-info-circle' id="room-icon"></i>
+            <span class="link_name">OtherInfo</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a href="booking.html" class="active">Room Booking</a></li>
+          <li><a href="./service.html">Hotel Services</a></li>
+          <li><a href="./private_events.html">Private Events</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+      </li>
+      <li>
+        <a href="./index.html">
+          <i class='bx bx-log-out'></i>
+          <span class="link_name">Logout</span>
+        </a>
+      </li>
+</ul>
+  </div>
+   
+
+
+
+  <div class="main-section">
+
+  <div id="header"> 
+    <div class="header">
+     <!-- Navbar structure -->
+     <nav class="navbar navbar-expand-lg navbar-light w-100">
+      <a class="navbar-brand" href="#">
+        <img src="./image/logos.png" alt="navbar-logo"/>
+      </a>
+      <div class="logo-details">
+        <div class="logo_name"></div>
+        <i class='bx bx-menu' id="btn"></i>
+      </div>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="input-serach">
+              <button class="input-btn" type="submit"><i class='bx bx-search'></i></button>
+            </form>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class='bx bx-user-circle'></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="" class="dropdown-item">
+                  <img src="./image/profile-img.jpg" alt="user-img" />
+                </a>
+              </li>
+              <li><a class="dropdown-item" href="#">Dexter Smith</a></li>
+              <li><a class="dropdown-item" href="#">Manager</a></li>
+              <li><a href="" class="dropdown-item">Setting</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+  <main class="page-content">
+    <div class="container-fulid">
+      <div class="row" id="page-content-row">
+
+       <!-- booking-heading start -->
+
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+          <div class="booking-heading">
+            <h2>Booking From:-</h2>
+          </div>
+        </div>
+
+       <!-- booking-heading end -->
+
+    <!-- booking section start -->
+
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+          <div class="booking-title">
+            <h4>Room Booking Details</h4>
+          </div>
+        </div>
+
+        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+                <!-- <div class="booking-from">
+                  <div class="from">
+                    <form class="login ">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Enter Your Name</label> 
+                                <input type="text" placeholder="First Name" class="form-control" required />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Enter Your Last Name</label>
+                                <input type="text" placeholder="Last Name" class="form-control" required />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Enter Your Email</label>
+                                <input type="email" placeholder="Your Email" class="form-control" required />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Enter Your Phn.No</label>
+                                <input type="number" placeholder="Your Phn.No" class="form-control" required />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Room Type</label>
+                                <select>
+                                    <option>Please Choose..</option>
+                                    <option>Single Room</option>
+                                    <option>Double Room</option>
+                                    <option>Family Room</option>
+                                    <option>Luxury Room</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Identity Proof</label>
+                                <select>
+                                    <option>Please Choose..</option>
+                                    <option>Pan Card</option>
+                                    <option>Passport</option>
+                                    <option>AdharCard</option>
+                                    <option>Luxury Room</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Check In</label>
+                                <input type="date" class="form-control"/>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="pb-2 text-white">Check In</label>
+                                <input type="date" class="form-control"/>
+                            </div>
+                            <div class="col-lg-6"> 
+                                <label class="pb-2 text-white">Total Person</label>
+                                <select>
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                            <label class="pb-2 text-white">Payment Mode</label>
+                            <select>
+                                <option>Please Choose..</option>
+                                <option>Cash</option>
+                                <option>Cheque</option>
+                                <option>UPI</option>
+                            </select>
+                            </div>
+                            <div class="from-btn">
+                                <button class="from-button">Booking Now</button>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+                </div> -->
+
+                <div class="booking-from">
+                    <div class="from">
+                      <form id="bookingForm" class="login">
+                        <div class="row">
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Enter Your Name</label>
+                            <input id="firstName" type="text" placeholder="First Name" class="form-control" required />
+                            <div id="firstNameError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Enter Your Last Name</label>
+                            <input id="lastName" type="text" placeholder="Last Name" class="form-control" required />
+                            <div id="lastNameError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Enter Your Email</label>
+                            <input id="email" type="email" placeholder="Your Email" class="form-control" required />
+                            <div id="emailError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Enter Your Phn.No</label>
+                            <input id="phone" type="number" placeholder="Your Phn.No" class="form-control" required />
+                            <div id="phoneError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Room Type</label>
+                            <select id="roomType" class="form-control">
+                              <option value="">Please Choose..</option>
+                              <option>Single Room</option>
+                              <option>Double Room</option>
+                              <option>Family Room</option>
+                              <option>Luxury Room</option>
+                            </select>
+                            <div id="roomTypeError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Identity Proof</label>
+                            <select id="identityProof" class="form-control">
+                              <option value="">Please Choose..</option>
+                              <option>Pan Card</option>
+                              <option>Passport</option>
+                              <option>AdharCard</option>
+                            </select>
+                            <div id="identityProofError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Check In</label>
+                            <input id="checkIn" type="date" class="form-control" />
+                            <div id="checkInError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Check Out</label>
+                            <input id="checkOut" type="date" class="form-control" />
+                            <div id="checkOutError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Total Person</label>
+                            <select id="totalPerson" class="form-control">
+                              <option value="0">Please Choose..</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                            <div id="totalPersonError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                            <label class="pb-2 text-white">Payment Mode</label>
+                            <select id="paymentMode" class="form-control">
+                              <option value="">Please Choose..</option>
+                              <option>Cash</option>
+                              <option>Cheque</option>
+                              <option>UPI</option>
+                            </select>
+                            <div id="paymentModeError" class="error-message"></div>
+                          </div>
+                          <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+                            <div class="from-btn">
+                              <button type="button" id="submitBtn" class="from-button">Booking Now</button>
+                            </div>
+                          </div>
+                          <div id="successMessage" class="success-message"></div>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+        </div>
+
+ 
+    <!-- booking section end -->
+
+
+
+    <!-- copyright section start -->
+
+            <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+              <div class="copyright">
+                <div class="row">
+                    <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                        <div class="copyright-main">
+                            <h5>Copyright © 2024 Luxurious. All Rights Reserved.</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 col-sm-12 col-md-6">
+                        <div class="copyright-main2">
+                            <h5>Developed by: <a href="#">ThemePure</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- copyright section end -->
+
+           
+
+      </div>
+    </div>
+  </main>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+
+   // sidebar toggle button
+
+  let sidebar = document.querySelector(".sidebar");
+  let logoHeader = document.querySelector("#header");
+  let closeBtn = document.querySelector("#btn");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    logoHeader.classList.toggle("open");
+    menuBtnChange();
+  });
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+
+  // navbar toggle in sidebar js
+      let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e)=>{
+    let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+    arrowParent.classList.toggle("showMenu");
+      });
+    }
+
+// sidebar dropdown js
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const dropdownToggle = document.getElementById('otherInfoDropdown');
+//   const dropdownMenu = dropdownToggle.nextElementSibling;
+//   const dropdownIcon = document.getElementById('dropdownIcon');
+
+//   dropdownToggle.addEventListener('click', function() {
+//     dropdownMenu.classList.toggle('show');
+//     dropdownIcon.classList.toggle('rotate');
+//   });
+
+//   document.addEventListener('click', function(e) {
+//     if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+//       dropdownMenu.classList.remove('show');
+//       dropdownIcon.classList.remove('rotate');
+//     }
+//   });
+// });
+
+</script>
+
+
+<!-- from validation js -->
+
+<!-- <script>
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+  let isValid = true;
+
+  const firstName = document.getElementById('firstName');
+  const lastName = document.getElementById('lastName');
+  const email = document.getElementById('email');
+  const phone = document.getElementById('phone');
+  const roomType = document.getElementById('roomType');
+  const identityProof = document.getElementById('identityProof');
+  const checkIn = document.getElementById('checkIn');
+  const checkOut = document.getElementById('checkOut');
+  const totalPerson = document.getElementById('totalPerson');
+  const paymentMode = document.getElementById('paymentMode');
+
+  const firstNameError = document.getElementById('firstNameError');
+  const lastNameError = document.getElementById('lastNameError');
+  const emailError = document.getElementById('emailError');
+  const phoneError = document.getElementById('phoneError');
+  const roomTypeError = document.getElementById('roomTypeError');
+  const identityProofError = document.getElementById('identityProofError');
+  const checkInError = document.getElementById('checkInError');
+  const checkOutError = document.getElementById('checkOutError');
+  const totalPersonError = document.getElementById('totalPersonError');
+  const paymentModeError = document.getElementById('paymentModeError');
+
+  const successMessage = document.getElementById('successMessage');
+
+  // Clear previous messages
+  firstNameError.textContent = '';
+  lastNameError.textContent = '';
+  emailError.textContent = '';
+  phoneError.textContent = '';
+  roomTypeError.textContent = '';
+  identityProofError.textContent = '';
+  checkInError.textContent = '';
+  checkOutError.textContent = '';
+  totalPersonError.textContent = '';
+  paymentModeError.textContent = '';
+  successMessage.textContent = '';
+
+  // Validate inputs
+  if (firstName.value.trim() === '') {
+    firstNameError.textContent = 'First Name is required';
+    isValid = false;
+  }
+  if (lastName.value.trim() === '') {
+    lastNameError.textContent = 'Last Name is required';
+    isValid = false;
+  }
+  if (email.value.trim() === '') {
+    emailError.textContent = 'Email is required';
+    isValid = false;
+  }
+  if (phone.value.trim() === '') {
+    phoneError.textContent = 'Phone Number is required';
+    isValid = false;
+  }
+  if (roomType.value.trim() === '') {
+    roomTypeError.textContent = 'Room Type is required';
+    isValid = false;
+  }
+  if (identityProof.value.trim() === '') {
+    identityProofError.textContent = 'Identity Proof is required';
+    isValid = false;
+  }
+  if (checkIn.value.trim() === '') {
+    checkInError.textContent = 'Check In date is required';
+    isValid = false;
+  }
+  if (checkOut.value.trim() === '') {
+    checkOutError.textContent = 'Check Out date is required';
+    isValid = false;
+  }
+  if (totalPerson.value.trim() === '') {
+    totalPersonError.textContent = 'Total Person is required';
+    isValid = false;
+  }
+  if (paymentMode.value.trim() === '') {
+    paymentModeError.textContent = 'Payment Mode is required';
+    isValid = false;
+  }
+
+  if (isValid) {
+    successMessage.textContent = 'Booking successful!';
+  }
+
+  // Add green color to error messages when input is filled
+  const inputs = [firstName, lastName, email, phone, roomType, identityProof, checkIn, checkOut, totalPerson, paymentMode];
+  const errors = [firstNameError, lastNameError, emailError, phoneError, roomTypeError, identityProofError, checkInError, checkOutError, totalPersonError, paymentModeError];
+
+  inputs.forEach((input, index) => {
+    input.addEventListener('input', () => {
+      if (input.value.trim() !== '') {
+        errors[index].style.color = 'green';
+      } else {
+        errors[index].style.color = 'red';
+      }
+    });
+  });
+});
+
+</script> -->
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    let isValid = true;
+  
+    const fields = [
+      { id: 'firstName', errorId: 'firstNameError', message: 'First Name is required' },
+      { id: 'lastName', errorId: 'lastNameError', message: 'Last Name is required' },
+      { id: 'email', errorId: 'emailError', message: 'Email is required' },
+      { id: 'phone', errorId: 'phoneError', message: 'Phone Number is required' },
+      { id: 'roomType', errorId: 'roomTypeError', message: 'Room Type is required' },
+      { id: 'identityProof', errorId: 'identityProofError', message: 'Identity Proof is required' },
+      { id: 'checkIn', errorId: 'checkInError', message: 'Check In date is required' },
+      { id: 'checkOut', errorId: 'checkOutError', message: 'Check Out date is required' },
+      { id: 'totalPerson', errorId: 'totalPersonError', message: 'Total Person is required' },
+      { id: 'paymentMode', errorId: 'paymentModeError', message: 'Payment Mode is required' }
+    ];
+  
+    const successMessage = document.getElementById('successMessage');
+    successMessage.textContent = '';
+  
+    fields.forEach(field => {
+      const input = document.getElementById(field.id);
+      const errorElement = document.getElementById(field.errorId);
+  
+      errorElement.textContent = '';
+      if (field.id === 'totalPerson') {
+        if (input.value === '0') {
+          errorElement.textContent = field.message;
+          isValid = false;
+        }
+      } else if (input.value.trim() === '') {
+        errorElement.textContent = field.message;
+        isValid = false;
+      }
+    });
+  
+    if (isValid) {
+      successMessage.textContent = 'Booking successful!';
+    }
+  
+    // Add green color to error messages when input is filled
+    fields.forEach(field => {
+      const input = document.getElementById(field.id);
+      const errorElement = document.getElementById(field.errorId);
+  
+      input.addEventListener('input', () => {
+        if (field.id === 'totalPerson') {
+          if (input.value !== '0') {
+            errorElement.style.color = 'green';
+            errorElement.textContent = 'Looks good!';
+          } else {
+            errorElement.style.color = 'red';
+            errorElement.textContent = field.message;
+          }
+        } else {
+          if (input.value.trim() !== '') {
+            errorElement.style.color = 'green';
+            errorElement.textContent = 'Looks good!';
+          } else {
+            errorElement.style.color = 'red';
+            errorElement.textContent = field.message;
+          }
+        }
+      });
+    });
+  });
+  </script>
+  
+  
+</body>
+</html>
